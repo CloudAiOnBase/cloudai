@@ -1,0 +1,391 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../img/favicon.ico">
+        <title>Tokenomics - CloudAI docs</title>
+        <link href="../css/bootstrap.min.css" rel="stylesheet">
+        <link href="../css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css">
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+        <script>hljs.highlightAll();</script> 
+    </head>
+
+    <body>
+        <div class="navbar fixed-top navbar-expand-lg navbar-dark bg-primary">
+            <div class="container">
+                <a class="navbar-brand" href="..">CloudAI docs</a>
+                <!-- Expander button -->
+                <button type="button" class="navbar-toggler" data-toggle="collapse" data-target="#navbar-collapse">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <!-- Expanded navigation -->
+                <div id="navbar-collapse" class="navbar-collapse collapse">
+                        <!-- Main navigation -->
+                        <ul class="nav navbar-nav">
+                            <li class="navitem">
+                                <a href=".." class="nav-link">Home</a>
+                            </li>
+                            <li class="navitem active">
+                                <a href="./" class="nav-link">Tokenomics</a>
+                            </li>
+                        </ul>
+
+                    <ul class="nav navbar-nav ml-auto">
+                        <li class="nav-item">
+                            <a href="#" class="nav-link" data-toggle="modal" data-target="#mkdocs_search_modal">
+                                <i class="fa fa-search"></i> Search
+                            </a>
+                        </li>
+                            <li class="nav-item">
+                                <a rel="prev" href=".." class="nav-link">
+                                    <i class="fa fa-arrow-left"></i> Previous
+                                </a>
+                            </li>
+                            <li class="nav-item">
+                                <a rel="next" class="nav-link disabled">
+                                    Next <i class="fa fa-arrow-right"></i>
+                                </a>
+                            </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <div class="row">
+                    <div class="col-md-3"><div class="navbar-light navbar-expand-md bs-sidebar hidden-print affix" role="complementary">
+    <div class="navbar-header">
+        <button type="button" class="navbar-toggler collapsed" data-toggle="collapse" data-target="#toc-collapse" title="Table of Contents">
+            <span class="fa fa-angle-down"></span>
+        </button>
+    </div>
+
+    
+    <div id="toc-collapse" class="navbar-collapse collapse card bg-light">
+        <ul class="nav flex-column">
+            
+            <li class="nav-item" data-level="1"><a href="#cloudai-tokenomics-summary" class="nav-link">CloudAI Tokenomics Summary</a>
+              <ul class="nav flex-column">
+            <li class="nav-item" data-level="2"><a href="#token-overview" class="nav-link">📌 Token Overview</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#token-distribution" class="nav-link">📌 Token Distribution</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#founder-vesting-schedule" class="nav-link">📌 Founder Vesting Schedule</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#staking-rewards-sustainability" class="nav-link">📌 Staking Rewards &amp; Sustainability</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#fee-structure-long-term-sustainability" class="nav-link">📌 Fee Structure (Long-Term Sustainability)</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#dynamic-staking-apr-model" class="nav-link">📌 Dynamic Staking APR Model</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#final-summary" class="nav-link">📌 Final Summary</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+              </ul>
+            </li>
+        </ul>
+    </div>
+</div></div>
+                    <div class="col-md-9" role="main">
+
+<h1 id="cloudai-tokenomics-summary">CloudAI Tokenomics Summary</h1>
+<h2 id="token-overview">📌 Token Overview</h2>
+<ul>
+<li><strong>Token Name:</strong> CloudAI  </li>
+<li><strong>Token Symbol:</strong> CLOUD  </li>
+<li><strong>Total Supply:</strong> 1,000,000,000 (1B) CLOUD  </li>
+<li><strong>Initial Price:</strong> $0.00008 per CLOUD (At launch)  </li>
+<li><strong>Liquidity Pool:</strong> 3 ETH + 100,000,000 CLOUD (Uniswap on Base L2)  </li>
+<li><strong>Starting Market Cap:</strong> $80K (fully diluted), $8K (circulating)  </li>
+</ul>
+<hr />
+<h2 id="token-distribution">📌 Token Distribution</h2>
+<table>
+<thead>
+<tr>
+<th><strong>Category</strong></th>
+<th><strong>Percentage</strong></th>
+<th><strong>Tokens (CLOUD)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Liquidity Pool (Uniswap)</strong></td>
+<td><strong>10%</strong></td>
+<td><strong>100,000,000</strong></td>
+</tr>
+<tr>
+<td><strong>Community &amp; Ecosystem</strong></td>
+<td><strong>40%</strong></td>
+<td><strong>400,000,000</strong></td>
+</tr>
+<tr>
+<td><strong>Treasury &amp; Growth Fund</strong></td>
+<td><strong>40%</strong></td>
+<td><strong>400,000,000</strong></td>
+</tr>
+<tr>
+<td><strong>Founder</strong></td>
+<td><strong>10%</strong></td>
+<td><strong>100,000,000</strong> (5-Year Vesting, 1-Year Cliff)</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="founder-vesting-schedule">📌 Founder Vesting Schedule</h2>
+<ul>
+<li><strong>Total Founder Allocation:</strong> <strong>100M CLOUD (10%)</strong>  </li>
+<li><strong>Vesting Period:</strong> <strong>5 years</strong>  </li>
+<li><strong>Cliff:</strong> <strong>1-year cliff</strong> (No tokens unlocked in the first year)  </li>
+<li><strong>Monthly Vesting:</strong> <strong>After the cliff, tokens unlock monthly over 4 years.</strong>  </li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><strong>Time Period</strong></th>
+<th><strong>Tokens Unlocked (%)</strong></th>
+<th><strong>Tokens Unlocked (CLOUD)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Year 1 (Cliff)</strong></td>
+<td><strong>0%</strong></td>
+<td><strong>0 CLOUD</strong></td>
+</tr>
+<tr>
+<td><strong>Year 2 (Start of Unlocking)</strong></td>
+<td><strong>25%</strong></td>
+<td><strong>25M CLOUD</strong></td>
+</tr>
+<tr>
+<td><strong>Year 3</strong></td>
+<td><strong>25%</strong></td>
+<td><strong>25M CLOUD</strong></td>
+</tr>
+<tr>
+<td><strong>Year 4</strong></td>
+<td><strong>25%</strong></td>
+<td><strong>25M CLOUD</strong></td>
+</tr>
+<tr>
+<td><strong>Year 5 (Fully Unlocked)</strong></td>
+<td><strong>25%</strong></td>
+<td><strong>25M CLOUD</strong></td>
+</tr>
+</tbody>
+</table>
+<p>✅ <strong>Prevents early dumps</strong> → No tokens can be sold in the first year.<br />
+✅ <strong>Ensures long-term commitment</strong> → Founder is aligned with project growth.<br />
+✅ <strong>Gradual release over 5 years</strong> → Avoids excessive supply shock.  </p>
+<hr />
+<h2 id="staking-rewards-sustainability">📌 Staking Rewards &amp; Sustainability</h2>
+<p>CloudAI will use a <strong>hybrid staking model</strong>, transitioning from fixed staking rewards to a fee-based system over time.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Phase</strong></th>
+<th><strong>Rewards Source</strong></th>
+<th><strong>Annual APR</strong></th>
+<th><strong>Sustainability Plan</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>Years 1-5</strong></td>
+<td><strong>Community Allocation (400M CLOUD)</strong></td>
+<td><strong>10% APR</strong></td>
+<td>Uses fixed staking pool, no new emissions.</td>
+</tr>
+<tr>
+<td><strong>Years 5-10</strong></td>
+<td><strong>50% Fees + 50% Community Fund</strong></td>
+<td><strong>7-8% APR</strong></td>
+<td>Slowly replaces emissions with fees.</td>
+</tr>
+<tr>
+<td><strong>Years 10+</strong></td>
+<td><strong>100% Fee-Based Staking</strong></td>
+<td><strong>4-6% APR</strong></td>
+<td>No new tokens minted, fully sustainable.</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="fee-structure-long-term-sustainability">📌 Fee Structure (Long-Term Sustainability)</h2>
+<p>CloudAI will transition to <strong>fee-based staking rewards</strong> to replace emissions.</p>
+<table>
+<thead>
+<tr>
+<th><strong>Fee Source</strong></th>
+<th><strong>Who Pays?</strong></th>
+<th><strong>Goes To?</strong></th>
+<th><strong>% to Staking Rewards</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>AI Agent Usage Fees</strong></td>
+<td>Users of AI services</td>
+<td>Stakers &amp; Treasury</td>
+<td><strong>50%</strong></td>
+</tr>
+<tr>
+<td><strong>CloudVerse Transactions</strong></td>
+<td>AI agents, users</td>
+<td>Stakers &amp; Treasury</td>
+<td><strong>50%</strong></td>
+</tr>
+<tr>
+<td><strong>Governance &amp; Proposal Fees</strong></td>
+<td>Proposal creators, voters</td>
+<td>Treasury</td>
+<td><strong>20%</strong></td>
+</tr>
+<tr>
+<td><strong>Smart Contract Execution Fees</strong></td>
+<td>Users, devs</td>
+<td>Treasury</td>
+<td><strong>10-20%</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="dynamic-staking-apr-model">📌 Dynamic Staking APR Model</h2>
+<table>
+<thead>
+<tr>
+<th><strong>% of Total Supply Staked</strong></th>
+<th><strong>Staking APR</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><strong>10% or less staked</strong></td>
+<td><strong>10% APR (max cap)</strong></td>
+</tr>
+<tr>
+<td><strong>20% staked</strong></td>
+<td><strong>8% APR</strong></td>
+</tr>
+<tr>
+<td><strong>30% staked</strong></td>
+<td><strong>6% APR</strong></td>
+</tr>
+<tr>
+<td><strong>40% staked</strong></td>
+<td><strong>4% APR</strong></td>
+</tr>
+<tr>
+<td><strong>50%+ staked</strong></td>
+<td><strong>3% APR</strong></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="final-summary">📌 Final Summary</h2>
+<p>1️⃣ <strong>First 5 years:</strong> Fixed <strong>10% APR</strong> from <strong>Community Allocation (400M CLOUD)</strong><br />
+2️⃣ <strong>Next 5 years:</strong> <strong>Staking rewards are 50% emissions + 50% fees</strong><br />
+3️⃣ <strong>After 10 years:</strong> <strong>Staking is fully funded by AI &amp; transaction fees</strong><br />
+4️⃣ <strong>APR reduces dynamically as more people stake</strong> to maintain sustainability<br />
+5️⃣ <strong>Liquidity will be put in the community DAO when ready</strong>  </p></div>
+            </div>
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            <p>Documentation built with <a href="https://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+        <script src="../js/jquery-3.6.0.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script>
+            var base_url = "..",
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
+        </script>
+        <script src="../js/base.js"></script>
+        <script src="../search/main.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="searchModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-lg">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="searchModalLabel">Search</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p>From here you can search these documents. Enter your search terms below.</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" placeholder="Search..." id="mkdocs-search-query" title="Type search term here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No results found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div><div class="modal" id="mkdocs_keyboard_modal" tabindex="-1" role="dialog" aria-labelledby="keyboardModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h4 class="modal-title" id="keyboardModalLabel">Keyboard Shortcuts</h4>
+                <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+              <table class="table">
+                <thead>
+                  <tr>
+                    <th style="width: 20%;">Keys</th>
+                    <th>Action</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td class="help shortcut"><kbd>?</kbd></td>
+                    <td>Open this help</td>
+                  </tr>
+                  <tr>
+                    <td class="next shortcut"><kbd>n</kbd></td>
+                    <td>Next page</td>
+                  </tr>
+                  <tr>
+                    <td class="prev shortcut"><kbd>p</kbd></td>
+                    <td>Previous page</td>
+                  </tr>
+                  <tr>
+                    <td class="search shortcut"><kbd>s</kbd></td>
+                    <td>Search</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+
+    </body>
+</html>

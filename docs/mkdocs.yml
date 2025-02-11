@@ -1,0 +1,8 @@
+site_name: CloudAI docs
+nav:
+  - Home: index.md
+  - Tokenomics: tokenomics.md
+
+# Change build output directory to website/docs/
+site_dir: ../website/docs
+
