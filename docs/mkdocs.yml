@@ -1,4 +1,6 @@
 site_name: CloudAI docs
+theme:
+  name: material
 nav:
   - Home: index.md
   - Tokenomics: tokenomics.md
