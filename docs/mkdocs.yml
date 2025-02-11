@@ -3,6 +3,7 @@ theme:
   name: material
 nav:
   - Home: index.md
+  - Agents: agents.md
   - Tokenomics: tokenomics.md
 
 # Change build output directory to website/docs/
