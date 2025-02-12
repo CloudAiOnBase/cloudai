@@ -21,7 +21,7 @@ Provides **initial liquidity** on Uniswap to facilitate seamless trading and pri
 
 ### **2. Community & Ecosystem (40%)**  
 This allocation is intended for:  
-- Staking rewards.
+- Staking rewards.  
 - Ecosystem growth and incentives.  
 - Partnerships, grants, contributors.  
 
@@ -38,7 +38,6 @@ Reserved for the **founder**, subject to a **5-year vesting schedule with a 1-ye
 ## Governance & Transparency  
 - The **Community & Ecosystem** allocation is managed by the **CloudAI DAO.**  
 - The **Treasury & Growth Fund** is governed through a **multi-sig wallet with a community veto system.**  
-- All transactions and fund allocations will be **publicly accessible and reported regularly.**  
 
 ---
 
