@@ -75,8 +75,7 @@ CloudAI will transition to **fee-based staking rewards** to replace emissions.
 | **10% or less staked** | **10% APR (max cap)** |
 | **20% staked** | **8% APR** |
 | **30% staked** | **6% APR** |
-| **40% staked** | **4% APR** |
-| **50%+ staked** | **3% APR** |
+| **40%+ staked** | **4% APR (minimum cap)** |
 
 ---
 
