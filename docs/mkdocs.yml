@@ -6,6 +6,7 @@ nav:
   - Agents: agents.md
   - Tokenomics: tokenomics.md
   - Allocation: allocation.md
+  - Staking: staking.md
 
 # Change build output directory to website/docs/
 site_dir: ../website/docs

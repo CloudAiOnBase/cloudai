@@ -9,10 +9,8 @@
       
       
       
-        <link rel="prev" href="../agents/">
+        <link rel="prev" href="../allocation/">
       
-      
-        <link rel="next" href="../allocation/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -20,7 +18,7 @@
     
     
       
-        <title>Tokenomics - CloudAI docs</title>
+        <title>Staking - CloudAI docs</title>
       
     
     
@@ -65,7 +63,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#cloudai-tokenomics-summary" class="md-skip">
+        <a href="#cloudai-staking-specifications" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +99,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Tokenomics
+              Staking
             
           </span>
         </div>
@@ -226,29 +224,9 @@
       
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Tokenomics
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../tokenomics/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -257,75 +235,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#token-overview" class="md-nav__link">
-    📌 Token Overview
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#token-distribution" class="md-nav__link">
-    📌 Token Distribution
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#founder-vesting-schedule" class="md-nav__link">
-    📌 Founder Vesting Schedule
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#staking-rewards-sustainability" class="md-nav__link">
-    📌 Staking Rewards &amp; Sustainability
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#fee-structure-long-term-sustainability" class="md-nav__link">
-    📌 Fee Structure (Long-Term Sustainability)
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-staking-apr-model" class="md-nav__link">
-    📌 Dynamic Staking APR Model
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#final-summary" class="md-nav__link">
-    📌 Final Summary
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -353,9 +262,27 @@
       
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../staking/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Staking
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -364,6 +291,127 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#cloudai-staking-specifications" class="md-nav__link">
+    CloudAI Staking Specifications
+  </a>
+  
+    <nav class="md-nav" aria-label="CloudAI Staking Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dynamic-staking-apr-model" class="md-nav__link">
+    1. Dynamic Staking APR Model
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#2-staking-contract-dependency" class="md-nav__link">
+    2. Staking Contract Dependency
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#3-unstaking-conditions" class="md-nav__link">
+    3. Unstaking Conditions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#4-ownership-governance" class="md-nav__link">
+    4. Ownership &amp; Governance
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#5-contract-controls-features" class="md-nav__link">
+    5. Contract Controls &amp; Features
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Contract Controls & Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pause-rewards-distribution" class="md-nav__link">
+    ✅ Pause Rewards Distribution
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#modifiable-parameters-dao-controlled" class="md-nav__link">
+    ✅ Modifiable Parameters (DAO-Controlled)
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#emergency-withdraw" class="md-nav__link">
+    ✅ Emergency Withdraw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty-rewards-pool-to-community-funds" class="md-nav__link">
+    ✅ Empty Rewards Pool to Community Funds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-upgradable" class="md-nav__link">
+    ✅ Non-Upgradable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-staking-rewards-sustainability-plan" class="md-nav__link">
+    6. Staking Rewards &amp; Sustainability Plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#final-summary" class="md-nav__link">
+    Final Summary
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -385,8 +433,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -395,51 +441,105 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#token-overview" class="md-nav__link">
-    📌 Token Overview
+  <a href="#cloudai-staking-specifications" class="md-nav__link">
+    CloudAI Staking Specifications
+  </a>
+  
+    <nav class="md-nav" aria-label="CloudAI Staking Specifications">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#1-dynamic-staking-apr-model" class="md-nav__link">
+    1. Dynamic Staking APR Model
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#token-distribution" class="md-nav__link">
-    📌 Token Distribution
+        
+          <li class="md-nav__item">
+  <a href="#2-staking-contract-dependency" class="md-nav__link">
+    2. Staking Contract Dependency
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#founder-vesting-schedule" class="md-nav__link">
-    📌 Founder Vesting Schedule
+        
+          <li class="md-nav__item">
+  <a href="#3-unstaking-conditions" class="md-nav__link">
+    3. Unstaking Conditions
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#staking-rewards-sustainability" class="md-nav__link">
-    📌 Staking Rewards &amp; Sustainability
+        
+          <li class="md-nav__item">
+  <a href="#4-ownership-governance" class="md-nav__link">
+    4. Ownership &amp; Governance
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#fee-structure-long-term-sustainability" class="md-nav__link">
-    📌 Fee Structure (Long-Term Sustainability)
+        
+          <li class="md-nav__item">
+  <a href="#5-contract-controls-features" class="md-nav__link">
+    5. Contract Controls &amp; Features
+  </a>
+  
+    <nav class="md-nav" aria-label="5. Contract Controls & Features">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#pause-rewards-distribution" class="md-nav__link">
+    ✅ Pause Rewards Distribution
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#dynamic-staking-apr-model" class="md-nav__link">
-    📌 Dynamic Staking APR Model
+        
+          <li class="md-nav__item">
+  <a href="#modifiable-parameters-dao-controlled" class="md-nav__link">
+    ✅ Modifiable Parameters (DAO-Controlled)
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
+  <a href="#emergency-withdraw" class="md-nav__link">
+    ✅ Emergency Withdraw
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#empty-rewards-pool-to-community-funds" class="md-nav__link">
+    ✅ Empty Rewards Pool to Community Funds
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#non-upgradable" class="md-nav__link">
+    ✅ Non-Upgradable
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#6-staking-rewards-sustainability-plan" class="md-nav__link">
+    6. Staking Rewards &amp; Sustainability Plan
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
   <a href="#final-summary" class="md-nav__link">
-    📌 Final Summary
+    Final Summary
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -458,99 +558,92 @@
                   
 
 
-<h1 id="cloudai-tokenomics-summary">CloudAI Tokenomics Summary</h1>
-<h2 id="token-overview">📌 Token Overview</h2>
-<ul>
-<li><strong>Token Name:</strong> CloudAI  </li>
-<li><strong>Token Symbol:</strong> CLOUD  </li>
-<li><strong>Total Supply:</strong> 1,000,000,000 (1B) CLOUD  </li>
-<li><strong>Initial Price:</strong> $0.00008 per CLOUD (At launch)  </li>
-<li><strong>Liquidity Pool:</strong> 3 ETH + 100,000,000 CLOUD (Uniswap on Base L2)  </li>
-<li><strong>Starting Market Cap:</strong> $80K (fully diluted), $8K (circulating)  </li>
-</ul>
+  <h1>Staking</h1>
+
+<h2 id="cloudai-staking-specifications">CloudAI Staking Specifications</h2>
 <hr />
-<h2 id="token-distribution">📌 Token Distribution</h2>
+<h3 id="1-dynamic-staking-apr-model"><strong>1. Dynamic Staking APR Model</strong></h3>
 <table>
 <thead>
 <tr>
-<th><strong>Category</strong></th>
-<th><strong>Percentage</strong></th>
-<th><strong>Tokens (CLOUD)</strong></th>
+<th>% of Circulating Supply Staked</th>
+<th>Staking APR</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td><strong>Liquidity Pool (Uniswap)</strong></td>
-<td><strong>10%</strong></td>
-<td><strong>100,000,000</strong></td>
+<td>≤ 10%</td>
+<td>10% APR (max cap)</td>
 </tr>
 <tr>
-<td><strong>Community &amp; Ecosystem</strong></td>
-<td><strong>40%</strong></td>
-<td><strong>400,000,000</strong></td>
+<td>20%</td>
+<td>8% APR</td>
 </tr>
 <tr>
-<td><strong>Treasury &amp; Growth Fund</strong></td>
-<td><strong>40%</strong></td>
-<td><strong>400,000,000</strong></td>
+<td>30%</td>
+<td>6% APR</td>
 </tr>
 <tr>
-<td><strong>Founder</strong></td>
-<td><strong>10%</strong></td>
-<td><strong>100,000,000</strong> (5-Year Vesting, 1-Year Cliff)</td>
+<td>≥ 40%</td>
+<td>4% APR (minimum cap)</td>
 </tr>
 </tbody>
 </table>
-<hr />
-<h2 id="founder-vesting-schedule">📌 Founder Vesting Schedule</h2>
 <ul>
-<li><strong>Total Founder Allocation:</strong> <strong>100M CLOUD (10%)</strong>  </li>
-<li><strong>Vesting Period:</strong> <strong>5 years</strong>  </li>
-<li><strong>Cliff:</strong> <strong>1-year cliff</strong> (No tokens unlocked in the first year)  </li>
-<li><strong>Monthly Vesting:</strong> <strong>After the cliff, tokens unlock monthly over 4 years.</strong>  </li>
+<li><strong>APR is dynamically adjusted</strong> based on the percentage of circulating supply staked.  </li>
+<li><strong>Circulating supply is fetched from an external contract.</strong>  </li>
 </ul>
-<table>
-<thead>
-<tr>
-<th><strong>Time Period</strong></th>
-<th><strong>Tokens Unlocked (%)</strong></th>
-<th><strong>Tokens Unlocked (CLOUD)</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>Year 1 (Cliff)</strong></td>
-<td><strong>0%</strong></td>
-<td><strong>0 CLOUD</strong></td>
-</tr>
-<tr>
-<td><strong>Year 2 (Start of Unlocking)</strong></td>
-<td><strong>25%</strong></td>
-<td><strong>25M CLOUD</strong></td>
-</tr>
-<tr>
-<td><strong>Year 3</strong></td>
-<td><strong>25%</strong></td>
-<td><strong>25M CLOUD</strong></td>
-</tr>
-<tr>
-<td><strong>Year 4</strong></td>
-<td><strong>25%</strong></td>
-<td><strong>25M CLOUD</strong></td>
-</tr>
-<tr>
-<td><strong>Year 5 (Fully Unlocked)</strong></td>
-<td><strong>25%</strong></td>
-<td><strong>25M CLOUD</strong></td>
-</tr>
-</tbody>
-</table>
-<p>✅ <strong>Prevents early dumps</strong> → No tokens can be sold in the first year.<br />
-✅ <strong>Ensures long-term commitment</strong> → Founder is aligned with project growth.<br />
-✅ <strong>Gradual release over 5 years</strong> → Avoids excessive supply shock.  </p>
 <hr />
-<h2 id="staking-rewards-sustainability">📌 Staking Rewards &amp; Sustainability</h2>
-<p>CloudAI will use a <strong>hybrid staking model</strong>, transitioning from fixed staking rewards to a fee-based system over time.</p>
+<h3 id="2-staking-contract-dependency"><strong>2. Staking Contract Dependency</strong></h3>
+<ul>
+<li><strong>Relies on an external contract</strong> to fetch the real-time <strong>circulating supply</strong> via <code>getCirculatingSupply()</code>.  </li>
+</ul>
+<hr />
+<h3 id="3-unstaking-conditions"><strong>3. Unstaking Conditions</strong></h3>
+<ul>
+<li><strong>Unstaking Period:</strong> 7 days.  </li>
+<li><strong>Users must manually claim</strong> their tokens after the cooldown.  </li>
+</ul>
+<hr />
+<h3 id="4-ownership-governance"><strong>4. Ownership &amp; Governance</strong></h3>
+<ul>
+<li><strong>Initial Owner:</strong> Deployer of the contract.  </li>
+<li><strong>DAO Transition:</strong> Ownership will be <strong>transferred to the CloudAI DAO</strong> once it is established.  </li>
+<li><strong>Governance Control:</strong> DAO will have full control over staking parameters and features.  </li>
+</ul>
+<hr />
+<h3 id="5-contract-controls-features"><strong>5. Contract Controls &amp; Features</strong></h3>
+<h4 id="pause-rewards-distribution">✅ <strong>Pause Rewards Distribution</strong></h4>
+<ul>
+<li>DAO can <strong>pause</strong> reward distribution while still allowing staking and unstaking.  </li>
+<li>Staked funds remain unaffected, but no rewards are accrued during the pause.  </li>
+</ul>
+<h4 id="modifiable-parameters-dao-controlled">✅ <strong>Modifiable Parameters (DAO-Controlled)</strong></h4>
+<ul>
+<li><strong>APR Rates.</strong>  </li>
+<li><strong>Adjust phase transitions (e.g., 5-year, 10-year shifts).</strong>  </li>
+<li><strong>Redemption mechanism (e.g., 7-day cooldown).</strong>  </li>
+</ul>
+<h4 id="emergency-withdraw">✅ <strong>Emergency Withdraw</strong></h4>
+<ul>
+<li><strong>Function:</strong> Unstakes <strong>all tokens</strong> from the staking contract and returns them to users' wallets.  </li>
+<li><strong>Trigger:</strong> Can only be activated by the DAO.  </li>
+<li><strong>Effect:</strong>  </li>
+<li>All staked tokens are <strong>automatically withdrawn</strong> for every staker.  </li>
+<li>Staking contract becomes <strong>inactive</strong> after execution.  </li>
+</ul>
+<h4 id="empty-rewards-pool-to-community-funds">✅ <strong>Empty Rewards Pool to Community Funds</strong></h4>
+<ul>
+<li>DAO can <strong>return unallocated rewards</strong> back to the community fund.  </li>
+<li>Ensures efficient fund management and sustainability.  </li>
+<li><strong>Requires DAO approval</strong> and <strong>a specified recipient wallet.</strong>  </li>
+</ul>
+<h4 id="non-upgradable">✅ <strong>Non-Upgradable</strong></h4>
+<ul>
+<li>The contract is <strong>immutable</strong> after deployment for security and stability.  </li>
+</ul>
+<hr />
+<h3 id="6-staking-rewards-sustainability-plan"><strong>6. Staking Rewards &amp; Sustainability Plan</strong></h3>
 <table>
 <thead>
 <tr>
@@ -563,98 +656,27 @@
 <tbody>
 <tr>
 <td><strong>Years 1-5</strong></td>
-<td><strong>Community Allocation (400M CLOUD)</strong></td>
-<td><strong>10% APR</strong></td>
-<td>Uses fixed staking pool, no new emissions.</td>
+<td>Community Allocation (<strong>400M CLOUD</strong>)</td>
+<td>Dynamic (Based on staked %)</td>
+<td>Rewards come from pre-allocated community tokens.</td>
 </tr>
 <tr>
 <td><strong>Years 5-10</strong></td>
-<td><strong>50% Fees + 50% Community Fund</strong></td>
-<td><strong>7-8% APR</strong></td>
-<td>Slowly replaces emissions with fees.</td>
+<td><strong>50% Fees</strong> + <strong>50% Community Fund</strong></td>
+<td>Dynamic</td>
+<td>Transition phase: staking rewards are partially funded by protocol fees.</td>
 </tr>
 <tr>
 <td><strong>Years 10+</strong></td>
 <td><strong>100% Fee-Based Staking</strong></td>
-<td><strong>4-6% APR</strong></td>
-<td>No new tokens minted, fully sustainable.</td>
+<td>Dynamic</td>
+<td>Fully sustainable: staking rewards come entirely from protocol-generated fees (no new token emissions).</td>
 </tr>
 </tbody>
 </table>
 <hr />
-<h2 id="fee-structure-long-term-sustainability">📌 Fee Structure (Long-Term Sustainability)</h2>
-<p>CloudAI will transition to <strong>fee-based staking rewards</strong> to replace emissions.</p>
-<table>
-<thead>
-<tr>
-<th><strong>Fee Source</strong></th>
-<th><strong>Who Pays?</strong></th>
-<th><strong>Goes To?</strong></th>
-<th><strong>% to Staking Rewards</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>AI Agent Usage Fees</strong></td>
-<td>Users of AI services</td>
-<td>Stakers &amp; Treasury</td>
-<td><strong>50%</strong></td>
-</tr>
-<tr>
-<td><strong>CloudVerse Transactions</strong></td>
-<td>AI agents, users</td>
-<td>Stakers &amp; Treasury</td>
-<td><strong>50%</strong></td>
-</tr>
-<tr>
-<td><strong>Governance &amp; Proposal Fees</strong></td>
-<td>Proposal creators, voters</td>
-<td>Treasury</td>
-<td><strong>20%</strong></td>
-</tr>
-<tr>
-<td><strong>Smart Contract Execution Fees</strong></td>
-<td>Users, devs</td>
-<td>Treasury</td>
-<td><strong>10-20%</strong></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="dynamic-staking-apr-model">📌 Dynamic Staking APR Model</h2>
-<table>
-<thead>
-<tr>
-<th><strong>% of Circulating Supply Staked</strong></th>
-<th><strong>Staking APR</strong></th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><strong>10% or less staked</strong></td>
-<td><strong>10% APR (max cap)</strong></td>
-</tr>
-<tr>
-<td><strong>20% staked</strong></td>
-<td><strong>8% APR</strong></td>
-</tr>
-<tr>
-<td><strong>30% staked</strong></td>
-<td><strong>6% APR</strong></td>
-</tr>
-<tr>
-<td><strong>40%+ staked</strong></td>
-<td><strong>4% APR (minimum cap)</strong></td>
-</tr>
-</tbody>
-</table>
-<hr />
-<h2 id="final-summary">📌 Final Summary</h2>
-<p>1️⃣ <strong>First 5 years:</strong> Dynamic <strong>APR</strong> capped at 10% from <strong>Community Allocation (400M CLOUD)</strong><br />
-2️⃣ <strong>Next 5 years:</strong> <strong>Staking rewards are 50% emissions + 50% fees</strong><br />
-3️⃣ <strong>After 10 years:</strong> <strong>Staking is fully funded by AI &amp; transaction fees</strong><br />
-4️⃣ <strong>APR reduces dynamically as more people stake</strong> to maintain sustainability<br />
-5️⃣ <strong>Liquidity will be put in the community DAO when ready</strong>  </p>
+<h3 id="final-summary"><strong>Final Summary</strong></h3>
+<p>This <strong>staking contract</strong> follows a <strong>dynamic APR model</strong>, adjusting rewards based on the circulating supply staked. Governance and key parameters are <strong>controlled by the DAO</strong> once established. Users can stake with a <strong>7-day unstaking cooldown</strong>, while DAO-controlled mechanisms allow for <strong>pausing rewards, modifying APR settings, emergency withdrawals, and returning unused rewards to the community fund</strong>. The contract is <strong>non-upgradable</strong> and transitions to a <strong>fully fee-based reward system</strong> over time for sustainability.  </p>
 
 
 
