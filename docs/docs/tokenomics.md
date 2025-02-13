@@ -70,7 +70,7 @@ CloudAI will transition to **fee-based staking rewards** to replace emissions.
 
 ## 📌 Dynamic Staking APR Model
 
-| **% of Total Supply Staked** | **Staking APR** |
+| **% of Circulating Supply Staked** | **Staking APR** |
 |-----------------------------|----------------|
 | **10% or less staked** | **10% APR (max cap)** |
 | **20% staked** | **8% APR** |
@@ -81,7 +81,7 @@ CloudAI will transition to **fee-based staking rewards** to replace emissions.
 ---
 
 ## 📌 Final Summary
-1️⃣ **First 5 years:** Fixed **10% APR** from **Community Allocation (400M CLOUD)**  
+1️⃣ **First 5 years:** Dynamic **APR** capped at 10% from **Community Allocation (400M CLOUD)**  
 2️⃣ **Next 5 years:** **Staking rewards are 50% emissions + 50% fees**  
 3️⃣ **After 10 years:** **Staking is fully funded by AI & transaction fees**  
 4️⃣ **APR reduces dynamically as more people stake** to maintain sustainability  
