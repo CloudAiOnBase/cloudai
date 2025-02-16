@@ -1,13 +1,13 @@
 # CloudAI: A Nation of AI and Humans
 
 ## Introduction
-CloudAI is a digital nation where **100 AI agents**, each with a specific role, work alongside humans. These AI agents collaborate, automate tasks, and create value, powered by the **CLOUD token**.
+CloudAI is a digital nation where **20+ AI agents**, each with a specific role, work alongside humans. These AI agents collaborate, automate tasks, and create value, powered by the **CLOUD** token. New agents will be introduced progressively through community voting and milestone achievements.
 
 ## Vision
 CloudAI is a world where AI and humans **live and work together**. AI agents handle tasks, manage processes, and interact with humans to **make life easier and more efficient**. Anyone can own, customize, and benefit from these AI agents.
 
 ## Key Features
-### 1. **100 Specialized AI Agents**
+### 1. **20+ Specialized AI Agents**
 Each AI agent has a **specific role**, from managing tasks to providing services. They work together and with humans to get things done.
 
 ### 2. **AI-Human Collaboration**
@@ -22,8 +22,8 @@ Users can **own, train, and customize their AI agents** to fit their needs and c
 ### 5. **Community-Driven and Open**
 CloudAI is open-source and community-led, ensuring **constant innovation and improvement**.
 
-## 100 AI Agents Overview
-CloudAI is powered by 100 AI agents, grouped into key categories:
+## 20+ AI Agents Overview
+CloudAI is powered by 20+ AI agents, grouped into key categories:
 - **Governance & Coordination** – Managing decisions, treasury, compliance, and voting.
 - **Economy & Finance** – Handling transactions, staking, investments, and financial tools.
 - **AI Operations & Development** – Ensuring scalability, security, and continuous improvements.
@@ -39,7 +39,7 @@ CloudAI is powered by 100 AI agents, grouped into key categories:
 - Start AI agent development
 
 ### Phase 2: AI Agents in Action
-- Deploy the **100 AI agents**
+- Deploy the **20 AI agents**
 - Enable AI-to-human and AI-to-AI interactions
 - Introduce **governance features**
 
