@@ -28,7 +28,7 @@
 
 - **Function:** Unstakes **all tokens** from the staking contract and returns them to users' wallets.
 - **Effect:**
-  - **All staked tokens + unpaid rewards** are refunded.
+  - **All staked tokens + unpaid rewards (optional)** are refunded.
   - Staking contract becomes **inactive** after execution.
 
 ----------
