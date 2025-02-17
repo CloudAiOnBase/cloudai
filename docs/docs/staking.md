@@ -66,6 +66,7 @@
 - **Smart contract view functions** will allow DAO governance to fetch staking data:
   - `getStakerInfo(address staker) → (uint256 stakedAmount)` – Fetches individual staker's data.
   - `getTotalStakers() → uint256` – Returns the total number of stakers.
+  - `getTotalStakedTokens() → uint256` – Returns the total amount of tokens staked in the contract.
   - `getAllStakers(uint256 start, uint256 count) → (address[] memory stakers, uint256[] memory stakedAmounts)` – Enables paginated retrieval for large-scale governance queries.
   
 - **Event Logging for Off-Chain Processing:**
