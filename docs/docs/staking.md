@@ -68,7 +68,8 @@
   - `getTotalStakers() → uint256` – Returns the total number of stakers.
   - `getTotalStakedTokens() → uint256` – Returns the total amount of tokens staked in the contract.
   - `getAllStakers(uint256 start, uint256 count) → (address[] memory stakers, uint256[] memory stakedAmounts)` – Enables paginated retrieval for large-scale governance queries.
-  
+  - `getStakersData(address[] memory stakers) → (uint256[] memory stakedAmounts)` – Fetches staking data for a specific group of stakers for governance tally purposes.
+
 - **Event Logging for Off-Chain Processing:**
   - `event StakerData(address indexed staker, uint256 stakedAmount);`
   - Emits an event whenever a staker **stakes/unstakes**, enabling **efficient off-chain tracking**.
