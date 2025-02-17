@@ -7,7 +7,7 @@ nav:
   - Tokenomics: tokenomics.md
   - Allocation: allocation.md
   - Staking: staking.md
-  - Staking APR: staking_APR.md
+  - Staking APR: staking_apr.md
 
 # Change build output directory to website/docs/
 site_dir: ../website/docs
