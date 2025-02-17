@@ -81,7 +81,3 @@ This mechanism activates only when necessary, preventing the depletion of reserv
 - **Long-term sustainability** by reducing APR as more tokens are staked.
 - **Failsafe fallback mechanism** to protect the staking pool in extreme cases.
 
-## Next Steps
-- Implement this model in the staking contract.
-- Integrate a governance-controlled fund refill mechanism if needed.
-
