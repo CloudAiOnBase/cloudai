@@ -1,67 +1,21 @@
-## CloudAI Staking Specifications
 
----
+## **CloudAI Staking Specifications**
 
-### **1. Dynamic Staking APR Model**
-| % of Circulating Supply Staked | Staking APR |
-|--------------------------------|-------------|
-| ≤ 10%                         | 10% APR (max cap) |
-| 20%                            | 8% APR |
-| 30%                            | 6% APR |
-| ≥ 40%                          | 4% APR (minimum cap) |
+### **1. Staking Rewards Distribution**
 
-- **APR is dynamically adjusted** based on the percentage of circulating supply staked.  
-- **Circulating supply is fetched from an external contract.**  
+- **Rewards are instantly claimable** (users can claim at any time).
+- No **auto-compounding** (users must manually stake rewards).
 
----
+----------
 
-### **2. Staking Contract Dependency**  
-- **Relies on an external contract** to fetch the real-time **circulating supply** via `getCirculatingSupply()`.  
+### **2. Unstaking Conditions**
 
----
+- **Unstaking Cooldown:** **10 days** before funds can be withdrawn.
+- **Users must manually claim** their tokens after the cooldown ends.
 
-### **3. Unstaking Conditions**  
-- **Unstaking Period:** 7 days.  
-- **Users must manually claim** their tokens after the cooldown.  
+----------
 
----
-
-### **4. Ownership & Governance**  
-- **Initial Owner:** Deployer of the contract.  
-- **DAO Transition:** Ownership will be **transferred to the CloudAI DAO** once it is established.  
-- **Governance Control:** DAO will have full control over staking parameters and features.  
-
----
-
-### **5. Contract Controls & Features**  
-
-#### ✅ **Pause Rewards Distribution**  
-- DAO can **pause** reward distribution while still allowing staking and unstaking.  
-- Staked funds remain unaffected, but no rewards are accrued during the pause.  
-
-#### ✅ **Modifiable Parameters (DAO-Controlled)**  
-- **APR Rates.**  
-- **Adjust phase transitions (e.g., 5-year, 10-year shifts).**  
-- **Redemption mechanism (e.g., 7-day cooldown).**  
-
-#### ✅ **Emergency Withdraw**  
-- **Function:** Unstakes **all tokens** from the staking contract and returns them to users' wallets.  
-- **Trigger:** Can only be activated by the DAO.  
-- **Effect:**  
-  - All staked tokens are **automatically withdrawn** for every staker.  
-  - Staking contract becomes **inactive** after execution.  
-
-#### ✅ **Empty Rewards Pool to Community Funds**  
-- DAO can **return unallocated rewards** back to the community fund.  
-- Ensures efficient fund management and sustainability.  
-- **Requires DAO approval** and **a specified recipient wallet.**  
-
-#### ✅ **Non-Upgradable**  
-- The contract is **immutable** after deployment for security and stability.  
-
----
-
-### **6. Staking Rewards & Sustainability Plan**  
+### **3. Staking Rewards & Sustainability Plan (goal)**
 
 | **Phase**  | **Rewards Source**                     | **Annual APR** | **Sustainability Plan** |
 |------------|---------------------------------|----------------|----------------------|
@@ -69,8 +23,90 @@
 | **Years 5-10** | **50% Fees** + **50% Community Fund** | Dynamic | Transition phase: staking rewards are partially funded by protocol fees. |
 | **Years 10+**  | **100% Fee-Based Staking** | Dynamic | Fully sustainable: staking rewards come entirely from protocol-generated fees (no new token emissions). |
 
----
+----------
 
-### **Final Summary**  
-This **staking contract** follows a **dynamic APR model**, adjusting rewards based on the circulating supply staked. Governance and key parameters are **controlled by the DAO** once established. Users can stake with a **7-day unstaking cooldown**, while DAO-controlled mechanisms allow for **pausing rewards, modifying APR settings, emergency withdrawals, and returning unused rewards to the community fund**. The contract is **non-upgradable** and transitions to a **fully fee-based reward system** over time for sustainability.  
+### **4. Inactivity Auto-Unstaking**
+
+- **Any staker who does not perform any action (stake, unstake, or claim rewards) for 2 years is automatically unstaked.**
+- **Effect:**
+  - Staked tokens + **unclaimed rewards** are automatically unstaked and sent back to the user’s wallet.
+  - Optimize rewards distribution and governance.
+
+----------
+
+### **5. Pause Rewards Distribution**
+
+- DAO can pause reward distribution while still allowing staking and unstaking.
+- Staked funds remain unaffected, but no rewards are accrued during the pause.
+
+----------
+
+### **6. Empty Rewards Pool to Community Funds**
+
+- Return unallocated rewards back to the community fund.
+- Ensures efficient fund management and sustainability.
+- Requires DAO approval and a specified recipient wallet.
+
+----------
+
+### **7. Emergency Withdraw**
+
+- **Function:** Unstakes **all tokens** from the staking contract and returns them to users' wallets.
+- **Effect:**
+  - **All staked tokens + unpaid rewards** are refunded.
+  - Staking contract becomes **inactive** after execution.
+
+----------
+
+### **8. Modifiable Parameters**
+
+- Will be fetched from CloudUtils (controlled by dev team). When DAO is ready, CloudUtils will fetch from the DAO contract. CloudUtils will remain with a security control mechanism to be useful in case of emergencies.
+
+| **Parameter** | **Initial value** |
+|--------------|----------|
+| **APR** | 4% → 10% |
+| **Staked CC** | 10% → 50% |
+| **Cooldown** | 10 days |
+| **Auto-unstake** | 2 years |
+
+----------
+
+### **9. Staking Contract Params**
+
+- Relies on **CloudUtils contract** for **circulating supply** and the **other params**.
+- **Caching Period:** **24 hours** (reduces gas fees and contract dependency issues)
+- Function to manually recache.
+- **CloudUtils params Transition:**
+  - **Phase 1:** Controlled by the dev.
+  - **Phase 2:** Dev team takes over (multisig-controlled, minimum 5 members).
+  - **Phase 3:** Ownership is transferred to the **CloudAI DAO**.
+- **Time-Lock:** **48h delay on governance changes** for security.
+- **Final DAO Control:** Once the DAO is established, CloudUtils will fetch all parameters directly from a **DAO-owned contract** to ensure full decentralization.
+
+----------
+
+### **10. Views and Events**
+
+- **Event Logging for Off-Chain Processing:**
+  - `event StakerData(address indexed staker, uint256 stakedAmount, uint256 votingPower);`
+  - Emits an event whenever a staker **stakes/unstakes**, enabling **efficient off-chain tracking**.
+- **Smart contract view functions** will allow DAO governance to fetch staking data:
+  - `getStakerInfo(address staker) → (uint256 stakedAmount, uint256 votingPower)` – Fetches individual staker's data.
+  - `getTotalStakers() → uint256` – Returns the total number of stakers.
+  - `getAllStakers(uint256 start, uint256 count) → (address[] memory stakers, uint256[] memory stakedAmounts, uint256[] memory votingPowers)` – Enables paginated retrieval for large-scale governance queries.
+  - `getVotingPowerAtBlock(address staker, uint256 blockNumber) → uint256` – Retrieves a staker’s voting power at a specific block for governance integrity.
+- **Off-chain indexing (The Graph) and event logs** can be used to enhance governance tracking:
+  - `event StakerData(address indexed staker, uint256 stakedAmount, uint256 votingPower);` – Enables DAO to track historical & real-time staker data efficiently.
+- **Security:** All governance queries will be public to ensure full transparency.
+- **Future Expansion:** `getStakersData()` for batch retrieval will be implemented in **CloudUtils** later.
+
+----------
+
+### **11. Non-Upgradable**
+
+- The contract is immutable after deployment for security.
+- Staked tokens cannot be accessed by the dev team or anyone.
+- Ensures stakers that there is no possibility of loss or theft.
+
+----------
 
