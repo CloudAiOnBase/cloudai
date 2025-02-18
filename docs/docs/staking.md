@@ -20,6 +20,8 @@
   - If a user **stakes** or **cancels their unstaking**, the unstaking process is **automatically revoked**.
   - The tokens in **unstaking cooldown are returned to active stake**.
 
+----------
+
 ### **2. Staking Rewards**
 
 - **Rewards are instantly claimable** (users can claim at any time).
@@ -71,8 +73,8 @@
 
 | **Parameter** | **Initial value** |
 |--------------|----------|
-| **APR range** | 4% → 10% |
 | **Minimum Stake Amount** | 100 CLOUD |
+| **APR range** | 4% → 10% |
 | **Staked Circ. Supply range** | 10% → 50% |
 | **Cooldown** | 10 days |
 | **Governance Inactivity Threshold** | 1 years |
