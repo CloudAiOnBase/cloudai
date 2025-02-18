@@ -15,11 +15,18 @@
 
 ----------
 
-### **3. Inactivity Auto-Unstaking**
+### **3. Inactivity Handling**
 
-- **Any staker who does not perform any action (stake, unstake, claim rewards, or vote) for 2 years is automatically unstaked.**
+- **After 1 year of inactivity** (no staking, unstaking, reward claims, or vote):
+  - 🚫 The staker is **ignored in governance tallying** (still staked but ignored for quorum).
+
+- **After 3 years of inactivity**:
+  - ⏳ The staker is **automatically unstaked**.
+  - Staked tokens + **unclaimed rewards** are sent back to the user’s wallet.
+
 - **Effect:**
-  - Staked tokens + **unclaimed rewards** are automatically unstaked and sent back to the user’s wallet.
+  - Ensures governance remains **active and fair**.
+  - Prevents **forever-locked inactive funds** while maintaining user flexibility.
   - Optimize rewards distribution and governance.
 
 ----------
@@ -47,8 +54,10 @@
 | **APR range** | 4% → 10% |
 | **Staked Circ. Supply range** | 10% → 50% |
 | **Cooldown** | 10 days |
-| **Auto-unstake** | 2 years |
+| **Governance Inactivity Threshold** | 1 years |
+| **Auto-unstake** | 3 years |
 
+Governance Inactivity Threshold
 - Params are fetched from **CloudUtils contract** where they can be adjusted.
 - **CloudUtils params control transition:**
   - **Phase 1:** Controlled by the dev.
@@ -67,6 +76,7 @@
   - `getStakerInfo(address staker) → (uint256 stakedAmount)` – Fetches individual staker's data.
   - `getTotalStakers() → uint256` – Returns the total number of stakers.
   - `getTotalStakedTokens() → uint256` – Returns the total amount of tokens staked in the contract.
+  - `getTotalStakedTokensForTally() → uint256` – Returns the total amount of staked tokens excluding inactive stakers for governance tallying.
   - `getAllStakers(uint256 start, uint256 count) → (address[] memory stakers, uint256[] memory stakedAmounts)` – Enables paginated retrieval for large-scale governance queries.
   - `getStakersData(address[] memory stakers) → (uint256[] memory stakedAmounts)` – Fetches staking data for a specific group of stakers for governance tally purposes.
 
