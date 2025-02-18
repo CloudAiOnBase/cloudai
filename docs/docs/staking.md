@@ -17,7 +17,7 @@
 
 ### **3. Inactivity Auto-Unstaking**
 
-- **Any staker who does not perform any action (stake, unstake, or claim rewards) for 2 years is automatically unstaked.**
+- **Any staker who does not perform any action (stake, unstake, claim rewards, or vote) for 2 years is automatically unstaked.**
 - **Effect:**
   - Staked tokens + **unclaimed rewards** are automatically unstaked and sent back to the user’s wallet.
   - Optimize rewards distribution and governance.
