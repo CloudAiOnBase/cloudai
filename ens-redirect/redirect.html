@@ -1,9 +1,22 @@
-<html>
-  <head>
-    <meta http-equiv="refresh" content="0; url=https://cloudaionbase.netlify.app/" />
-  </head>
-  <body>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Get the current path after .eth.limo (e.g., "/docs", "/about")
+        const currentPath = window.location.pathname;
+
+        // Base URL to redirect to
+        const baseRedirectURL = "https://cloudaionbase.netlify.app";
+
+        // Redirect to the same path on the new domain
+        window.location.replace(baseRedirectURL + currentPath);
+    </script>
+</head>
+<body>
     <p>Redirecting...</p>
-  </body>
+</body>
 </html>
 
