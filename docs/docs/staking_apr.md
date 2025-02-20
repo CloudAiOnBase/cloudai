@@ -9,7 +9,7 @@ This staking model dynamically adjusts the Annual Percentage Rate (APR) based on
 
 When the staking pool has sufficient funds, the APR dynamically adjusts based on the total staked percentage of the circulating supply:
 
-Formula: **APR (in %) = 10 - max(0, min(1, (Staked Percentage - 10) / 40)) × 6**
+Formula: **APR (in %) = 10 - max(0, min(1, (Staked Percentage - 10) / (40 - 10))) × 6**
 
 | Staked Percentage (% of Circulating Supply Staked) | Corresponding APR |
 |-----------------------------------|--------------|

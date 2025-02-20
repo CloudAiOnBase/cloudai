@@ -544,7 +544,7 @@
 <p>This staking model dynamically adjusts the Annual Percentage Rate (APR) based on the percentage of the circulating supply that is staked. The goal is to ensure a fair and sustainable reward system for stakers while maintaining the long-term viability of the staking pool.</p>
 <h2 id="apr-calculation">APR Calculation</h2>
 <p>When the staking pool has sufficient funds, the APR dynamically adjusts based on the total staked percentage of the circulating supply:</p>
-<p>Formula: <strong>APR (in %) = 10 - max(0, min(1, (Staked Percentage - 10) / 40)) × 6</strong></p>
+<p>Formula: <strong>APR (in %) = 10 - max(0, min(1, (Staked Percentage - 10) / (40 - 10))) × 6</strong></p>
 <table>
 <thead>
 <tr>
