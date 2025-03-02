@@ -86,20 +86,30 @@
     <script>
     async function addToken() {
         if (typeof window.ethereum === 'undefined') {
-            alert("MetaMask is not detected. Try refreshing the page or reopening your browser.");
+            alert("MetaMask not detected. If you're on mobile, open this site in MetaMask's browser.");
             return;
         }
 
         const tokenImageUrl = window.location.origin + "/images/token_icon.png";
 
         try {
-            // Switch to Base network before adding the token
+            // Check if user is on mobile
+            const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+            if (isMobile) {
+                // Direct mobile users to MetaMask token import page manually
+                const tokenImportUrl = `https://metamask.app.link/add-token?contractAddress=0x2425598dd959e47a294a737ee4104316864817cf&symbol=CLOUD&decimals=18&network=8453`;
+                window.location.href = tokenImportUrl;
+                return;
+            }
+
+            // Switch to Base network
             await ethereum.request({
                 method: "wallet_switchEthereumChain",
-                params: [{ chainId: "0x2105" }], // Base Mainnet Chain ID (Hex: 0x2105 = 8453)
+                params: [{ chainId: "0x2105" }], // Base Mainnet Chain ID
             });
 
-            // Add the token to MetaMask
+            // Add the token
             const wasAdded = await ethereum.request({
                 method: "wallet_watchAsset",
                 params: {
@@ -108,21 +118,22 @@
                         address: "0x2425598dd959e47a294a737ee4104316864817cf",
                         symbol: "CLOUD",
                         decimals: 18,
-                        image: tokenImageUrl, 
+                        image: tokenImageUrl,
                     },
                 },
             });
 
             if (wasAdded) {
-                alert("CLOUD token added to MetaMask!");
+                alert("CLOUD token added to MetaMask on Base!");
             } else {
                 alert("User declined to add the token.");
             }
         } catch (error) {
             console.error(error);
-            alert("An error occurred while adding the token.");
+            alert("Error: Make sure Base is added to MetaMask.");
         }
     }
+
     </script>
 </head>
 <body>
