@@ -85,35 +85,38 @@
     </style>
     <script>
     async function addToken() {
-        if (typeof window.ethereum !== 'undefined') { // Check if MetaMask is installed
-            try {
-                const wasAdded = await ethereum.request({
-                    method: "wallet_watchAsset",
-                    params: {
-                        type: "ERC20",
-                        options: {
-                            address: "0x2425598dd959e47a294a737ee4104316864817cf", 
-                            symbol: "CLOUD", 
-                            decimals: 18, 
-                            image: "https://your-token-logo-url.png", // Replace with actual logo URL
-                        },
-                    },
-                });
+        if (typeof window.ethereum === 'undefined') {
+            alert("MetaMask is not detected. Try refreshing the page or reopening your browser.");
+            return;
+        }
 
-                if (wasAdded) {
-                    alert("CLOUD token added to MetaMask!");
-                } else {
-                    alert("User declined to add the token.");
-                }
-            } catch (error) {
-                console.error(error);
-                alert("An error occurred while adding the token.");
+        const tokenImageUrl = window.location.origin + "/images/token_icon.png";
+
+        try {
+            const wasAdded = await ethereum.request({
+                method: "wallet_watchAsset",
+                params: {
+                    type: "ERC20",
+                    options: {
+                        address: "0x2425598dd959e47a294a737ee4104316864817cf",
+                        symbol: "CLOUD",
+                        decimals: 18,
+                        image: tokenImageUrl, 
+                    },
+                },
+            });
+
+            if (wasAdded) {
+                alert("CLOUD token added to MetaMask!");
+            } else {
+                alert("User declined to add the token.");
             }
-        } else {
-            alert("MetaMask is not installed. Please install it first.");
+        } catch (error) {
+            console.error(error);
+            alert("An error occurred while adding the token.");
         }
     }
-  </script>
+    </script>
 </head>
 <body>
     <!-- Header Section -->
