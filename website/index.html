@@ -83,6 +83,37 @@
             margin: 0 10px;
         }
     </style>
+    <script>
+    async function addToken() {
+        if (typeof window.ethereum !== 'undefined') { // Check if MetaMask is installed
+            try {
+                const wasAdded = await ethereum.request({
+                    method: "wallet_watchAsset",
+                    params: {
+                        type: "ERC20",
+                        options: {
+                            address: "0x2425598dd959e47a294a737ee4104316864817cf", 
+                            symbol: "CLOUD", 
+                            decimals: 18, 
+                            image: "https://your-token-logo-url.png", // Replace with actual logo URL
+                        },
+                    },
+                });
+
+                if (wasAdded) {
+                    alert("CLOUD token added to MetaMask!");
+                } else {
+                    alert("User declined to add the token.");
+                }
+            } catch (error) {
+                console.error(error);
+                alert("An error occurred while adding the token.");
+            }
+        } else {
+            alert("MetaMask is not installed. Please install it first.");
+        }
+    }
+  </script>
 </head>
 <body>
     <!-- Header Section -->
@@ -116,6 +147,8 @@
         <h2>A Decentralized AI Economy</h2>
         <p>The CLOUD token facilitates transactions and governance, making AI services accessible to everyone.</p>
         <a href="https://app.uniswap.org/explore/tokens/base/0x2425598dd959e47a294a737ee4104316864817cf" class="cta-btn-buy" target="_blank">Buy $CLOUD</a>
+
+    <button onclick="addToken()" style="padding: 10px 20px; font-size: 16px; cursor: pointer; background-color: #f6851b; color: white; border: none; border-radius: 5px;">Add CLOUD to MetaMask</button>
     </section>
 
     <!-- Roadmap Section -->
