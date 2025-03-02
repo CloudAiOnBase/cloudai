@@ -85,11 +85,6 @@
     </style>
     <script>
     async function addToken() {
-        if (typeof window.ethereum === 'undefined') {
-            alert("MetaMask not detected. If you're on mobile, open this site in MetaMask's browser.");
-            return;
-        }
-
         const tokenImageUrl = window.location.origin + "/images/token_icon.png";
 
         try {
