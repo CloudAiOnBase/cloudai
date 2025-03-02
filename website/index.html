@@ -93,6 +93,13 @@
         const tokenImageUrl = window.location.origin + "/images/token_icon.png";
 
         try {
+            // Switch to Base network before adding the token
+            await ethereum.request({
+                method: "wallet_switchEthereumChain",
+                params: [{ chainId: "0x2105" }], // Base Mainnet Chain ID (Hex: 0x2105 = 8453)
+            });
+
+            // Add the token to MetaMask
             const wasAdded = await ethereum.request({
                 method: "wallet_watchAsset",
                 params: {
