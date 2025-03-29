@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Redirecting...</title>
+    <script>
+        // Log current URL and query string for debugging
+        console.log("Current URL:", window.location.href);
+        console.log("Search:", window.location.search);
+
+        // Extract query parameters
+        const params = new URLSearchParams(window.location.search);
+        let path = "";
+
+        // Check if 'path' is explicitly defined (e.g., ?path=/docs/staking)
+        if (params.has("path")) {
+            path = params.get("path");
+        } else {
+            // Look for shorthand keys like ?docs/staking/
+            for (const [key] of params) {
+                path = key;
+                break;
+            }
+        }
+
+        // Ensure the path starts with a leading "/"
+        if (!path.startsWith("/")) {
+            path = "/" + path;
+        }
+
+        console.log("Final Redirect Path:", path);
+
+        // Base Web2 URL
+        const baseRedirectURL = "https://cloudhubonbase.netlify.app";
+
+        // Redirect to the correct Web2 path
+        window.location.replace(baseRedirectURL + path);
+    </script>
+</head>
+<body>
+    <p>Redirecting...</p>
+</body>
+</html>
+
